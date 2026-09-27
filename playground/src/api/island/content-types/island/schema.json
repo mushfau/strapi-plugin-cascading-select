@@ -1,0 +1,10 @@
+{
+  "kind": "collectionType",
+  "collectionName": "islands",
+  "info": { "singularName": "island", "pluralName": "islands", "displayName": "Island" },
+  "options": { "draftAndPublish": false },
+  "attributes": {
+    "name": { "type": "string", "required": true },
+    "atoll": { "type": "relation", "relation": "manyToOne", "target": "api::atoll.atoll", "inversedBy": "islands" }
+  }
+}

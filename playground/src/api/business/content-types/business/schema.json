@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "businesses",
+  "info": { "singularName": "business", "pluralName": "businesses", "displayName": "Business" },
+  "options": { "draftAndPublish": true },
+  "attributes": {
+    "name": { "type": "string", "required": true },
+    "location": {
+      "type": "customField",
+      "customField": "plugin::cascading-select.cascading-select",
+      "required": true,
+      "options": {
+        "parentUid": "api::atoll.atoll",
+        "childUid": "api::island.island",
+        "syncRelation": "island"
+      }
+    },
+    "island": { "type": "relation", "relation": "manyToOne", "target": "api::island.island" },
+    "branches": { "type": "component", "repeatable": true, "component": "shared.branch" }
+  }
+}

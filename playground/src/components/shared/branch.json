@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_shared_branches",
+  "info": { "displayName": "Branch" },
+  "attributes": {
+    "label": { "type": "string" },
+    "location": {
+      "type": "customField",
+      "customField": "plugin::cascading-select.cascading-select",
+      "options": { "parentUid": "api::atoll.atoll", "childUid": "api::island.island" }
+    }
+  }
+}

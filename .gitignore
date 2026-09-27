@@ -1,0 +1,12 @@
+# OS / editor
+.DS_Store
+.idea
+.vscode
+
+# Dependencies and build output (each package also has its own .gitignore)
+node_modules
+dist
+
+# Local plugin link used by the playground
+.yalc
+yalc.lock

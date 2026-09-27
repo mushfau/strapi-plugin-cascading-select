@@ -1,0 +1,11 @@
+{
+  "kind": "collectionType",
+  "collectionName": "atolls",
+  "info": { "singularName": "atoll", "pluralName": "atolls", "displayName": "Atoll" },
+  "options": { "draftAndPublish": false },
+  "attributes": {
+    "name": { "type": "string", "required": true, "unique": true },
+    "code": { "type": "string" },
+    "islands": { "type": "relation", "relation": "oneToMany", "target": "api::island.island", "mappedBy": "atoll" }
+  }
+}

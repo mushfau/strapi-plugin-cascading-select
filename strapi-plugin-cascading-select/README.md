@@ -11,13 +11,13 @@ Category → Subcategory.
   so API consumers can `populate` it like any other relation.
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/edit-view-dark.png">
-  <img src="docs/screenshots/edit-view-light.png" width="654" alt="The field in the Content Manager: Seenu is selected in the Atoll dropdown and the Island dropdown lists only Seenu's islands">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mushfau/strapi-plugin-cascading-select/main/strapi-plugin-cascading-select/docs/screenshots/edit-view-dark.png">
+  <img src="https://raw.githubusercontent.com/mushfau/strapi-plugin-cascading-select/main/strapi-plugin-cascading-select/docs/screenshots/edit-view-light.png" width="654" alt="The field in the Content Manager: Seenu is selected in the Atoll dropdown and the Island dropdown lists only Seenu's islands">
 </picture>
 
 ## Requirements
 
-- Strapi `^5.0.0`
+- Strapi 5 (tested with 5.55)
 - Two collection types, where the child has a relation to the parent (for example `island.atoll`,
   manyToOne → `atoll`).
 
@@ -43,15 +43,15 @@ Rebuild the admin panel (`npm run build`) or restart `npm run develop`.
 In the Content-Type Builder, choose **Add another field → Custom → Cascading select**.
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/ctb-picker-dark.png">
-  <img src="docs/screenshots/ctb-picker-light.png" width="600" alt="Cascading select in the Custom tab of the Content-Type Builder field picker">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mushfau/strapi-plugin-cascading-select/main/strapi-plugin-cascading-select/docs/screenshots/ctb-picker-dark.png">
+  <img src="https://raw.githubusercontent.com/mushfau/strapi-plugin-cascading-select/main/strapi-plugin-cascading-select/docs/screenshots/ctb-picker-light.png" width="600" alt="Cascading select in the Custom tab of the Content-Type Builder field picker">
 </picture>
 
 Then set the two collections in the basic settings:
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/ctb-settings-dark.png">
-  <img src="docs/screenshots/ctb-settings-light.png" width="600" alt="Basic settings of the field: parent collection api::atoll.atoll, child collection api::island.island, optional label fields and relation to parent">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mushfau/strapi-plugin-cascading-select/main/strapi-plugin-cascading-select/docs/screenshots/ctb-settings-dark.png">
+  <img src="https://raw.githubusercontent.com/mushfau/strapi-plugin-cascading-select/main/strapi-plugin-cascading-select/docs/screenshots/ctb-settings-light.png" width="600" alt="Basic settings of the field: parent collection api::atoll.atoll, child collection api::island.island, optional label fields and relation to parent">
 </picture>
 
 | Setting                    | Required | Description                                                                                    |
@@ -106,8 +106,8 @@ collection, and the plugin writes it from the selected child whenever the docume
 updated.
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/ctb-advanced-dark.png">
-  <img src="docs/screenshots/ctb-advanced-light.png" width="600" alt="Advanced settings of the field: Required checked, and Synced relation set to island">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mushfau/strapi-plugin-cascading-select/main/strapi-plugin-cascading-select/docs/screenshots/ctb-advanced-dark.png">
+  <img src="https://raw.githubusercontent.com/mushfau/strapi-plugin-cascading-select/main/strapi-plugin-cascading-select/docs/screenshots/ctb-advanced-light.png" width="600" alt="Advanced settings of the field: Required checked, and Synced relation set to island">
 </picture>
 
 Query it like any relation. The parent is derived from the child, so the two can never disagree:
@@ -132,8 +132,8 @@ On `create`, `update` and `clone`, for fields at the root, in components and in 
 Errors are attached to the field, so the Content Manager shows them next to the dropdowns:
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/validation-dark.png">
-  <img src="docs/screenshots/validation-light.png" width="654" alt="Publishing with only the atoll selected shows the error Island is required under the field">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mushfau/strapi-plugin-cascading-select/main/strapi-plugin-cascading-select/docs/screenshots/validation-dark.png">
+  <img src="https://raw.githubusercontent.com/mushfau/strapi-plugin-cascading-select/main/strapi-plugin-cascading-select/docs/screenshots/validation-light.png" width="654" alt="Publishing with only the atoll selected shows the error Island is required under the field">
 </picture>
 
 ## Configuration
@@ -181,7 +181,7 @@ npm run test:ts:back   # type-check server code
 npm run verify         # check the package before publishing
 ```
 
-A test app lives in [`../playground`](../playground). It seeds sample Maldivian atolls and islands and has
+A test app lives in [`playground`](https://github.com/mushfau/strapi-plugin-cascading-select/tree/main/playground). It seeds sample Maldivian atolls and islands and has
 a `Business` content type that uses the field. To link the plugin into it:
 
 ```bash

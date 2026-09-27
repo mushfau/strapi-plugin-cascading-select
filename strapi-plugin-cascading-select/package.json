@@ -35,7 +35,8 @@
     "watch:link": "strapi-plugin watch:link",
     "verify": "strapi-plugin verify",
     "test:ts:front": "tsc -p admin/tsconfig.json --noEmit",
-    "test:ts:back": "tsc -p server/tsconfig.json --noEmit"
+    "test:ts:back": "tsc -p server/tsconfig.json --noEmit",
+    "prepublishOnly": "npm run test:ts:front && npm run test:ts:back && npm run build && npm run verify"
   },
   "dependencies": {
     "yup": "0.32.9"
@@ -49,7 +50,6 @@
     "react-intl": "^6.8.9",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.30.6",
     "styled-components": "^6.5.3",
     "@types/react": "^18.3.31",
     "@types/react-dom": "^18.3.7",
@@ -60,14 +60,13 @@
   "peerDependencies": {
     "@strapi/strapi": "^5.0.0",
     "@strapi/sdk-plugin": "^5.0.0 || ^6.0.0",
-    "@strapi/design-system": "^2.2.4",
-    "@strapi/icons": "^2.2.4",
-    "react-intl": "^6.8.9",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^6.30.6",
-    "styled-components": "^6.5.3",
-    "@strapi/utils": "^5.0.0"
+    "@strapi/utils": "^5.0.0",
+    "@strapi/design-system": "^2.0.0",
+    "@strapi/icons": "^2.0.0",
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0",
+    "react-intl": "^6.0.0",
+    "styled-components": "^6.0.0"
   },
   "strapi": {
     "kind": "plugin",

@@ -192,6 +192,13 @@ npx yalc add --link strapi-plugin-cascading-select && npm install
 npm run develop
 ```
 
+## Issues and contributions
+
+Report bugs and request features in the
+[GitHub issues](https://github.com/mushfau/strapi-plugin-cascading-select/issues). Please include
+your Strapi version, the field settings (or the attribute from `schema.json`) and the steps to
+reproduce. Pull requests are welcome; see [Development](#development) for the local setup.
+
 ## License
 
 MIT
